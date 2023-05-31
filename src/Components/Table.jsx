@@ -1,9 +1,9 @@
 import React from 'react'
-
-const Table = ({data}) => {
+import Table from 'react-bootstrap/Table';
+const Tables = ({data}) => {
   return (
     <>
-    <table>
+    <Table>
       <thead>
         <tr>
           <th>ID</th>
@@ -11,6 +11,7 @@ const Table = ({data}) => {
           <th>username</th>
           <th>email</th>
           <th>Address</th>
+          <th>Phone</th>
         </tr>
       </thead>
       <tbody>
@@ -20,15 +21,16 @@ const Table = ({data}) => {
             <td>{item.name}</td>
             <td>{item.username}</td>
             <td>{item.email}</td>
-            
+            <td>{item.address.street},{item.address.suite},{item.address.suite},{item.address.suite},{item.address.suite}</td>
+            <td>{item.phone}</td>
         
           </tr>
         ))}
       </tbody>
-    </table>
+    </Table>
     </>
     
   )
 }
 
-export default Table
+export default Tables

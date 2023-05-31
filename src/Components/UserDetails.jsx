@@ -5,16 +5,10 @@ const UserDetails = () => {
   return (
     <div>
         <div className='Conatiner'>
-            <div className='admin-table' >
-                <div className='admin-subtitle'><h1>List of User Details</h1></div>
-                <button onClick={()=>addNewUser()}>Add User</button>
+            <div className='search-bar' >
+                <input type='text' placeholder='serch'/>
+                <button onClick={()=>addNewUser()}>Search</button>
             </div>
-            <ul>
-                <li>Hii</li>
-                <li>Hello</li>
-            </ul>
-          <hr/>
-          <DeleteAlluser/>
         </div>
     </div>
   )
