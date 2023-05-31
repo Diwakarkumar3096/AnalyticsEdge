@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './Components/NavBar/';
 import UserDetails from './Components/UserDetails';
 import { getPosts } from './Store/Slices/UserSlice';
+import Table from './Components/Table';
 
 const App = () => {
   const { posts, loading } = useSelector((state) => state.user); // Corrected the state property name
@@ -19,9 +20,9 @@ const App = () => {
     <div>
       <NavBar />
       <UserDetails />
-      {posts.map((item) => (
-        <h2 key={item.id}>{item.title}</h2>
-      ))}
+
+      <Table data={posts}/>
+
     </div>
   );
 };
